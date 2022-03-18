@@ -1,0 +1,39 @@
+<single-spa-router>
+  <style>
+    a {
+      padding-left: 10px;
+    }
+  </style>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+  <nav>
+    <a href="/">home</a>
+    <a href="/app-one/view1">Angular View 1 (lazy)</a>
+    <a href="/app-one/view2">Angular View 2 (lazy)</a>
+    <a href="/app-one/view3">Angular View 3</a>
+    <a href="/app-one/view4">Angular View 4</a>
+  </nav>
+  <main>
+    <route default>
+      This is the default route!      
+    </route>
+    <route path="app-one">
+      <application name="@test/app-one"></application>
+    </route>
+  </main>
+</single-spa-router>
